@@ -1,0 +1,15 @@
+<div *ngIf="linearizationInfo">
+  <h2>{{ linearizationInfo.title?.['@value'] }}</h2>
+  <p>Dernière version: {{ linearizationInfo.latestRelease }}</p>
+  <ul>
+    <li *ngFor="let release of linearizationInfo.release">{{ release }}</li>
+  </ul>
+</div>
+
+<div *ngIf="releaseInfo">
+  <h2>{{ releaseInfo.title?.['@value'] }}</h2>
+  <p>Date de sortie: {{ releaseInfo.releaseDate }}</p>
+  <ul>
+    <li *ngFor="let child of releaseInfo.child">{{ child }}</li>
+  </ul>
+</div>
