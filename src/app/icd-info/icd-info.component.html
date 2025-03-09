@@ -13,3 +13,13 @@
     <li *ngFor="let child of releaseInfo.child">{{ child }}</li>
   </ul>
 </div>
+
+<!-- Affichage des maladies et de leurs codes -->
+<div *ngIf="diseases.length > 0">
+  <h3>Liste des maladies :</h3>
+  <ul>
+    <li *ngFor="let disease of diseases">
+      <strong>{{ disease.code }}</strong>: {{ disease.name }}
+    </li>
+  </ul>
+</div>
